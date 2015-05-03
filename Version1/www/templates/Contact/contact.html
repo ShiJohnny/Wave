@@ -1,0 +1,90 @@
+<ion-view  view-title="Contact">
+    <ion-content>
+        <ion-list>
+            <ion-item ng-click="reveal(physicalAdress)">
+
+                {{physicalAdress.title}}
+
+
+
+                <div class="check-element animate-show"  ng-show= physicalAdress.show >
+                    <ion-item>
+                    {{physicalAdress.info}}
+                    </ion-item>
+                </div>
+
+
+
+            </ion-item>
+
+
+
+            <ion-item ng-click="reveal(mailingAdresss)">
+
+                {{mailingAdresss.title}}
+
+
+
+                <div class="check-element animate-show"  ng-show= mailingAdresss.show >
+                    <ion-item>
+                    {{mailingAdresss.info}}
+                    </ion-item>
+                </div>
+
+            </ion-item>
+
+
+            <ion-item ng-click="reveal(phone)">
+
+                {{phone.title}}
+
+
+
+                <div class="check-element animate-show"  ng-show= phone.show >
+                    <ion-item>
+
+                    {{phone.info}}
+                </ion-item>
+                </div>
+
+            </ion-item>
+
+
+
+            <ion-item ng-click="reveal(fax)">
+
+                {{fax.title}}
+
+
+                <div class="check-element animate-show"  ng-show= fax.show >
+                    <ion-item>
+                    {{fax.info}}
+            </ion-item>
+
+                    </div>
+
+            </ion-item>
+
+            <ion-item ng-click="reveal(email)">
+
+
+
+                {{email.title}}
+
+                <div class="check-element animate-show"  ng-show= email.show >
+                    <ion-item>
+                    {{email.info}}
+                    </ion-item>
+                </div>
+
+
+
+
+            </ion-item>
+
+
+
+        </ion-list>
+
+    </ion-content>
+</ion-view>

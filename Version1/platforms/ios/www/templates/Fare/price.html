@@ -1,0 +1,32 @@
+<ion-view title = "Prices">
+
+<ion-content >
+
+    <div  class="bar bar-dark item-input" id = "faqSearch">
+        <span  id ="searche" >Search</span>
+        <input type="text" ng-model= "search" id ="input1">
+
+    </div >
+
+
+
+    <ion-list>
+        <div class = "item priceItem" ng-repeat = "item in allPrice|filter: search" ng-click="reveal(item)">
+
+            {{item.title}}
+
+
+
+            <div class="item priceAmount check-element animate-show"  ng-show= item.show >
+                {{item.price}}</div>
+
+
+
+        </div>
+
+
+
+
+</ion-content>
+
+</ion-view>

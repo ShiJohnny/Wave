@@ -1,0 +1,29 @@
+<ion-view title = 'F.A.Q' cache-view="false">
+    <ion-content>
+
+
+        <div  class="bar bar-dark item-input" id = "faqSearch">
+            <span  id ="searche" >Search</span>
+            <input type="text" ng-model= "search" id ="input1">
+
+        </div >
+
+
+
+
+</div>
+    <ion-list>
+        <div class = 'item priceItem' ng-repeat="aQues in question |filter: search" ng-click="reveal(aQues)" >
+            {{aQues.title}}
+
+            <div class="item check-element animate-show"  ng-show= aQues.show >
+                {{aQues.info}}</div>
+
+        </div>
+
+
+        </ion-list>
+    </ion-content>
+
+
+</ion-view>
