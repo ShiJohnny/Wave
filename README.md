@@ -1,4 +1,4 @@
 #WaveTransit
--Version 1  \n
--Johnny Shi 
--Turnip
+#Version 1
+#Johnny Shi
+#Turnip
