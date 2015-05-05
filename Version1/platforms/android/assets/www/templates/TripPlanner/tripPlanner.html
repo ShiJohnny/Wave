@@ -1,0 +1,106 @@
+<ion-view hide-nav-bar="false" view-title= "Trip Planner" >
+    <ion-content >
+
+
+        <div class = gridLayout>
+
+            <form name = "myForm" >
+                <label>
+
+                    <span class="input-label">Starting Point</span>
+
+                </label>
+                <label class="item item-input">
+
+                    <input type="text" ng-model= "param.start" ng-required="true" >
+                </label>
+
+
+
+                <label>
+
+                    <span class="input-label">Ending Point</span>
+
+                </label>
+                <label class="item item-input">
+
+                    <input type="text" ng-model="param.end" ng-required=" true">
+                </label>
+
+
+
+
+
+                <label class="item item-input">
+
+
+                    <span class="input-label">Date</span>
+
+
+                    <input type="date" ng-model="param.date" ng-required="true" >
+
+
+
+                </label>
+
+
+
+
+
+
+                <label class="item item-input">
+                    <span class="input-label">Time</span>
+                    <input type="time" ng-model="param.time"   ng-required="true" >
+                </label>
+
+
+
+
+                <label class="item item-input">
+
+                    <span class="input-label"> Plan By</span>
+                    <select ng-model="param.dir"
+                            ng-options="item as item.name for item in items" ng-required="true">
+
+
+                    </select>
+
+                </label>
+
+
+
+
+
+
+
+
+
+                <ion-item>
+
+                    <a class = "button button-dark" ng-disabled="myForm.$invalid" ng-click = "searchRoute()" >
+
+
+                        Search
+
+                    </a>
+
+
+                    <a class = "button  button-dark" ng-click = "clear()"  >
+
+
+                        Clear
+                    </a>
+                </ion-item>
+
+
+
+            </form>
+
+
+
+
+        </div>
+
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,158 @@
+<ion-view title = "Cost Calculator">
+
+    <ion-content class = "frame_look_feel" >
+
+
+
+
+            <form name = "myForm" >
+
+
+                <div  class="bar bar-dark item-input costbar" >
+                    <div class = "savingTitle"  >Your car's gas mileage (MPG)</div>
+                   <div class = "input2">   <input type="number" ng-model= "info.gasMPG" ng-required="true" ></div>
+
+                </div >
+
+
+
+
+                <div  class="bar bar-dark item-input costbar ">
+                    <div  class ="savingTitle" >Cost of gas per gallon</div>
+
+                    <div class = "input2">   <input type="number" ng-model= "info.gasPrice" ng-required="true" ></div>
+
+                </div >
+
+
+
+
+                <div  class="bar bar-dark item-input costbar " >
+
+
+                    <div class = "savingTitle"    >Number of miles in round trip commute</div>
+
+                    <div class = "input2">   <input type="number" ng-model= "info.milesRT" ng-required="true" ></div>
+
+
+
+
+
+                </div >
+
+
+                <div  class="bar bar-dark item-input costbar">
+                    <div class = "savingTitle"> Daily parking cost</div>
+                    <div class = "input2">   <input type="number" ng-model= "info.parking" ng-required="true" ></div>
+
+
+                </div >
+
+
+                <div  class="bar bar-dark item-input" id = "faqSearch costbar">
+                    <div class = "savingTitle" >Daily round trip commute using Wave Transit</div>
+                    <div class = "input2">   <input type="number" ng-model= "info.roundTrip" ng-required="true" ></div>
+
+
+                </div >
+
+
+
+
+
+
+
+
+
+
+
+                <div  class="bar bar-dark item-input">
+                    <div  >Car Size</div>
+                    <div id = "carSize">  <select ng-model="info.carSize"
+                                                    ng-options="item as item.name for item in items" ng-required="true">
+
+
+                    </select></div>
+
+
+                </div >
+
+
+
+
+                <div class="row">
+
+                    <div class="col=50">
+                    <button ng-disabled="myForm.$invalid" ng-click = "calculateCost()"  class = "button button-royal">
+
+
+                        Calculate
+
+                    </button>
+
+                </div>
+
+
+                    <button  ng-click = "clear()" class = " button button-royal">
+
+
+                        Clear {{vechileCost}}
+
+                    </button>
+                </div>
+
+
+
+<!---
+                <label>
+
+                    <span class = "item">Annual cost of commuting in your vehicle:</span>
+                    <span class="input-label"> ${{vechileCost}}</span>
+
+                </label>
+
+
+
+
+                <label>
+
+                    <span class="item">Annual cost of commuting on Wave Transit</span>
+                    <span class="item"> ${{waveCost}}</span>
+                </label>
+
+
+
+
+                <label>
+
+                    <span class="item">By riding Wave Transit you save</span>
+                    <span class="item"> ${{saveCost}}</span>
+
+                </label>
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </form>
+
+
+
+</ion-content>
+
+
+
+
+</ion-view>
